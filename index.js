@@ -105,7 +105,7 @@ io.on('connection', async socket => {
 
         notAvailable = notAvailable.filter(user => user.id !== socket.id);
         notAvailable = notAvailable.filter(user => user.id !== peer.id);
-        
+
         sockets.push(socket, peer);
     });
 
@@ -139,4 +139,4 @@ io.on('connection', async socket => {
     
         io.emit('numberOfOnline', allSockets.size);
     });
-});
+}); 

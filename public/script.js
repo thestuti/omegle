@@ -6,7 +6,7 @@ let alreadyTyping = false;
 
 socket.on('numberOfOnline', size => {
     document.querySelector('.online').innerHTML = `${size.toLocaleString()} online now`
-});
+}); 
 
 document.querySelector('#start').addEventListener('click', () => {
  
