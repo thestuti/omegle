@@ -127,6 +127,9 @@ body {
     outline: none;
 }
 
+#stop{
+    color: white;
+}
 .textarea {
     height: 100%;
     resize: none;
