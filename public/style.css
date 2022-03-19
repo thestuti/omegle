@@ -96,12 +96,14 @@ body {
 
 .btn {
     height: 100%;
-    background-color: white;
+    background-color: #121830;
     font-size: 3rem;
     border: 1px solid #CCCCCC;
     cursor: pointer;
 }
-
+#send{
+    color: white;
+}
 .btn:focus {
     outline: none;
 }
@@ -115,7 +117,7 @@ body {
 }
 
 .start {
-    background-image: linear-gradient(to bottom, #7EBFFF, #0581FE) !important;
+    background-color: #121830;
     color: white !important;
     font-weight: 600 !important;
     border: none !important;
