@@ -76,11 +76,12 @@ document.querySelector('#text').addEventListener('click', e => {
 
 socket.on('newMessageToClient', data => {
     const notStranger = data.id === socket.id;
+    const msg = htmlEncode(data.msg);
 
     conversation.innerHTML += `
         <div class="chat">
             <span class="${notStranger ? 'name blue' : 'name red'}">${notStranger ? 'You: ' : 'Stranger: '} </span>
-            <span class="text">${data.msg}</span>
+            <span class="text">${msg}</span>
         </div>
     `;
 
@@ -174,4 +175,10 @@ function reset() {
     alreadyTyping = false;
 
     conversation.scrollTo(0, conversation.scrollHeight);
+}
+
+function htmlEncode(str){
+    return String(str).replace(/[^\w. ]/gi, function(c){
+        return '&#'+c.charCodeAt(0)+';';
+    });
 }
