@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Omegle Clone</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="navbar">
-        <img class="logo" src="./img/logo.png" alt="logo">
-        <h2 class="description">Talk to strangers!</h1>
-        <h2 class="online"></h2>
+      <img class="logo" src="./img/logo.png" alt="logo" />
+      <h2 class="description">Talk to strangers!</h2>
+      <h2 class="online"></h2>
     </section>
 
     <main class="main">
-        <section class="conversation">
-        </section>
+      <section class="conversation"></section>
 
-        <form class="form">
-            <button type="button" class="btn start bottom-left-radius" id="start">Start</button>
-            <button type="button" class="btn bottom-left-radius hide" id="stop">Stop</button>
-            <button type="button" class="btn bottom-left-radius bold hide" id="really">Really?</button>
-            <textarea name="text" id="text" class="textarea" disabled></textarea>
-            <button type="submit" id="send" class="btn bottom-right-radius" disabled>Send</button>
-        </form>
+      <form class="form">
+        <button type="button" class="btn start bottom-left-radius" id="start">
+          Start
+        </button>
+        <button type="button" class="btn bottom-left-radius hide" id="stop">
+          Stop
+        </button>
+        <button
+          type="button"
+          class="btn bottom-left-radius bold hide"
+          id="really"
+        >
+          Really?
+        </button>
+        <textarea name="text" id="text" class="textarea" disabled></textarea>
+        <button
+          type="submit"
+          id="send"
+          class="btn bottom-right-radius"
+          disabled
+        >
+          Send
+        </button>
+      </form>
     </main>
 
-    <script src='/socket.io/socket.io.js'></script>
-    <script src='./script.js'></script>
-</body>
-</html>  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
